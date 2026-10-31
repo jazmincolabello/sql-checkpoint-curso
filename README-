@@ -1,0 +1,39 @@
+# Proyecto RetailPro / Ventas_Tech_DB - Data Analytics (CoderHouse)
+
+Repositorio oficial que contiene los scripts SQL y la arquitectura analitica desarrollada para las pre-entregas del Modulo de Data Analytics en CoderHouse. El proyecto simula la gestion, modelado y analisis de datos de un negocio tecnologico.
+
+---
+
+## Modelo Relacional en Estrella
+El proyecto implementa un esquema dimensional normalizado para la inteligencia de negocios:
+* `Fact Ventas`: Tabla de hechos central que almacena las transacciones operativas.
+* `Dim Clientes`: Dimensión con los datos y segmentacion de los compradores.
+* `Dim Productos`: Dimensión con el catalogo de articulos tecnologicos.
+* `Dim Categorias`: Dimensión que agrupa los productos por familias.
+* `Dim Fechas`: Dimensión temporal para analisis de series y estacionalidad.
+
+---
+
+## Medidas DAX Clave (Capa Power BI)
+El modelo se conecta a una capa de visualizacion que implementa las siguientes metricas analiticas principales:
+* `Total Ventas`: Sumatoria total de la facturacion de la compania.
+* `Ventas Online`: Filtrado de ingresos correspondientes al canal digital.
+* `Ventas YTD` (Year-to-Date): Acumulado de ventas del ano en curso.
+* `Ventas LY` (Last Year): Facturacion correspondiente al mismo periodo del ano anterior.
+* `% Crecimiento Anual`: Indicador de variacion porcentual interanual.
+
+---
+
+## Herramientas y Tecnologias Utilizadas
+* SQL Server / T-SQL: Motor de base de datos relacional.
+* SSMS (SQL Server Management Studio): Entorno de desarrollo para la ejecucion de scripts con delimitadores GO.
+* Power BI: Capa de visualizacion y modelado analitico End-to-End.
+* Git y GitHub: Control de versiones y repositorio de codigo.
+
+---
+
+## Como ejecutar los scripts en SSMS
+1. Clonar este repositorio o descargar los archivos .sql.
+2. Abrir SQL Server Management Studio (SSMS).
+3. Ejecutar el script ventas_tech_db.sql respetando los lotes de comandos (GO) para asegurar la correcta creacion de la estructura DDL y carga DML.
+4. Ejecutar los scripts de consultas de negocio y vistas (m4_consultas_negocio.sql y m5_consultas_joins.sql).
